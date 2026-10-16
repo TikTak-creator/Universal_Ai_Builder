@@ -1,0 +1,1503 @@
+{
+  "schemaVersion": 1,
+  "id": "e9187d58-f308-420b-ba4b-6f66cd035459",
+  "name": "Orbit · Creative workspace",
+  "createdAt": "2026-10-15T09:58:59.179Z",
+  "updatedAt": "2026-10-15T09:58:59.179Z",
+  "rootIds": [
+    "ceb36e6c-c2f4-4815-aaae-1574d015caac",
+    "19de1c65-45f7-46f5-ad24-ccb2d9718923",
+    "4c1c3d79-96a3-4fa6-8d53-3fc2b0775ba1",
+    "6e9b3459-0965-4cab-8ef4-dc53b99624a0",
+    "e482b63a-6b6c-4555-addc-cdb99140aa1e",
+    "04e67d75-9b2d-48e1-a87a-7bee64302d5f",
+    "9d5e9330-75b4-45ac-a2f1-93ceb8b16ce6",
+    "9852bd25-fc2c-4e01-b1fd-2bf42b5937d6",
+    "82b4f3da-8c5d-4022-bd4d-4f33e5a0e70d",
+    "b2cb7410-ebee-4b9a-9072-50676726f1b5",
+    "dfd72340-23d1-4f8f-985a-aef1adea0df7",
+    "c019071a-d615-4cd8-9737-e0ec62dda8d8",
+    "35013da5-583f-402c-9cb6-59d35e91025d"
+  ],
+  "nodes": {
+    "ceb36e6c-c2f4-4815-aaae-1574d015caac": {
+      "id": "ceb36e6c-c2f4-4815-aaae-1574d015caac",
+      "type": "text",
+      "name": "Логотип Orbit",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 42,
+        "y": 32,
+        "width": 160,
+        "height": 40,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "◈  orbit",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 27,
+        "fontWeight": 700,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "19de1c65-45f7-46f5-ad24-ccb2d9718923": {
+      "id": "19de1c65-45f7-46f5-ad24-ccb2d9718923",
+      "type": "text",
+      "name": "Навигация",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 590,
+        "y": 40,
+        "width": 350,
+        "height": 30,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Продукт       Возможности       Ресурсы",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#9d9fac",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 13,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "4c1c3d79-96a3-4fa6-8d53-3fc2b0775ba1": {
+      "id": "4c1c3d79-96a3-4fa6-8d53-3fc2b0775ba1",
+      "type": "button",
+      "name": "Войти",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 966,
+        "y": 32,
+        "width": 112,
+        "height": 38,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Войти ↗",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#242731",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 1,
+        "borderRadius": 10,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 600,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 12,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "6e9b3459-0965-4cab-8ef4-dc53b99624a0": {
+      "id": "6e9b3459-0965-4cab-8ef4-dc53b99624a0",
+      "type": "divider",
+      "name": "Линия навигации",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 42,
+        "y": 94,
+        "width": 1036,
+        "height": 1,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#343743",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "e482b63a-6b6c-4555-addc-cdb99140aa1e": {
+      "id": "e482b63a-6b6c-4555-addc-cdb99140aa1e",
+      "type": "badge",
+      "name": "Метка релиза",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 42,
+        "y": 142,
+        "width": 207,
+        "height": 30,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "✦  МЕСТО ДЛЯ ВАШИХ ИДЕЙ",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#29223d",
+        "color": "#bbacf8",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 24,
+        "opacity": 1,
+        "fontSize": 10,
+        "fontWeight": 600,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 8,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "04e67d75-9b2d-48e1-a87a-7bee64302d5f": {
+      "id": "04e67d75-9b2d-48e1-a87a-7bee64302d5f",
+      "type": "text",
+      "name": "Заголовок",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 42,
+        "y": 191,
+        "width": 660,
+        "height": 150,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Большие идеи.\nБезграничный холст.",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 56,
+        "fontWeight": 650,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.15,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "9d5e9330-75b4-45ac-a2f1-93ceb8b16ce6": {
+      "id": "9d5e9330-75b4-45ac-a2f1-93ceb8b16ce6",
+      "type": "text",
+      "name": "Описание",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 44,
+        "y": 355,
+        "width": 565,
+        "height": 64,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Соберите мысли, найдите свой ритм и создайте\nчто-то особенное. Всё начинается с одного фрейма.",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#9396a6",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 17,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.7,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "9852bd25-fc2c-4e01-b1fd-2bf42b5937d6": {
+      "id": "9852bd25-fc2c-4e01-b1fd-2bf42b5937d6",
+      "type": "button",
+      "name": "Основная кнопка",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 44,
+        "y": 448,
+        "width": 194,
+        "height": 48,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Создать пространство  ↗",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#8b78f0",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 10,
+        "opacity": 1,
+        "fontSize": 13,
+        "fontWeight": 600,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 12,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "82b4f3da-8c5d-4022-bd4d-4f33e5a0e70d": {
+      "id": "82b4f3da-8c5d-4022-bd4d-4f33e5a0e70d",
+      "type": "text",
+      "name": "Подпись к кнопке",
+      "parentId": null,
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 257,
+        "y": 460,
+        "width": 260,
+        "height": 26,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Бесплатно. В вашем темпе.",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#737889",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 12,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "b2cb7410-ebee-4b9a-9072-50676726f1b5": {
+      "id": "b2cb7410-ebee-4b9a-9072-50676726f1b5",
+      "type": "frame",
+      "name": "Композиция",
+      "parentId": null,
+      "children": [
+        "358a85bb-54ea-4218-a637-43fe920335b8",
+        "ff6db9fe-f62e-4fb8-a08b-ebcdba6ccc51",
+        "0ab3867c-b897-40df-8b4b-091a7429dad3",
+        "cc2fcaa8-b79f-4a59-8bad-bbdecb2d2362"
+      ],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 756,
+        "y": 155,
+        "width": 315,
+        "height": 340,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#1c1c2c",
+        "color": "#f5f4fb",
+        "borderColor": "#333043",
+        "borderWidth": 1,
+        "borderRadius": 24,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "hidden"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "358a85bb-54ea-4218-a637-43fe920335b8": {
+      "id": "358a85bb-54ea-4218-a637-43fe920335b8",
+      "type": "shape",
+      "name": "Круг / лавандовый",
+      "parentId": "b2cb7410-ebee-4b9a-9072-50676726f1b5",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 68,
+        "y": 48,
+        "width": 192,
+        "height": 192,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#b7a1f4",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 100,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "ff6db9fe-f62e-4fb8-a08b-ebcdba6ccc51": {
+      "id": "ff6db9fe-f62e-4fb8-a08b-ebcdba6ccc51",
+      "type": "shape",
+      "name": "Квадрат / персиковый",
+      "parentId": "b2cb7410-ebee-4b9a-9072-50676726f1b5",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 26,
+        "y": 152,
+        "width": 140,
+        "height": 140,
+        "rotation": -14
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#f2ba9b",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 24,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "0ab3867c-b897-40df-8b4b-091a7429dad3": {
+      "id": "0ab3867c-b897-40df-8b4b-091a7429dad3",
+      "type": "shape",
+      "name": "Квадрат / лаймовый",
+      "parentId": "b2cb7410-ebee-4b9a-9072-50676726f1b5",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 194,
+        "y": 28,
+        "width": 90,
+        "height": 90,
+        "rotation": 14
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#d4df98",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 20,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "cc2fcaa8-b79f-4a59-8bad-bbdecb2d2362": {
+      "id": "cc2fcaa8-b79f-4a59-8bad-bbdecb2d2362",
+      "type": "text",
+      "name": "Символ композиции",
+      "parentId": "b2cb7410-ebee-4b9a-9072-50676726f1b5",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 170,
+        "y": 193,
+        "width": 120,
+        "height": 108,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "✳",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#ece5ff",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 92,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "dfd72340-23d1-4f8f-985a-aef1adea0df7": {
+      "id": "dfd72340-23d1-4f8f-985a-aef1adea0df7",
+      "type": "container",
+      "name": "Поймайте идею",
+      "parentId": null,
+      "children": [
+        "00b6bce3-a524-4ab8-a88c-d53051f53d0d",
+        "ca1102ec-c6be-43d8-960d-2fd029da6b35",
+        "799f4884-eb7f-475d-ab65-e823ba72a22d"
+      ],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 42,
+        "y": 552,
+        "width": 328,
+        "height": 181,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#1b1e27",
+        "color": "#f5f4fb",
+        "borderColor": "#30333e",
+        "borderWidth": 1,
+        "borderRadius": 14,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "00b6bce3-a524-4ab8-a88c-d53051f53d0d": {
+      "id": "00b6bce3-a524-4ab8-a88c-d53051f53d0d",
+      "type": "text",
+      "name": "Символ",
+      "parentId": "dfd72340-23d1-4f8f-985a-aef1adea0df7",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 16,
+        "width": 60,
+        "height": 40,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "✧",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#b7a1f4",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 30,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "ca1102ec-c6be-43d8-960d-2fd029da6b35": {
+      "id": "ca1102ec-c6be-43d8-960d-2fd029da6b35",
+      "type": "text",
+      "name": "Название карточки",
+      "parentId": "dfd72340-23d1-4f8f-985a-aef1adea0df7",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 70,
+        "width": 284,
+        "height": 30,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "01   Поймайте идею",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 16,
+        "fontWeight": 600,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "799f4884-eb7f-475d-ab65-e823ba72a22d": {
+      "id": "799f4884-eb7f-475d-ab65-e823ba72a22d",
+      "type": "text",
+      "name": "Текст карточки",
+      "parentId": "dfd72340-23d1-4f8f-985a-aef1adea0df7",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 111,
+        "width": 284,
+        "height": 50,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "От первого наброска\nдо следующего большого шага.",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#8a8f9f",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 13,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.6,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "c019071a-d615-4cd8-9737-e0ec62dda8d8": {
+      "id": "c019071a-d615-4cd8-9737-e0ec62dda8d8",
+      "type": "container",
+      "name": "Найдите свой ритм",
+      "parentId": null,
+      "children": [
+        "2c3264b5-76d1-496b-af40-0bc0a68fa0c9",
+        "0a0d0b7d-8e2c-4219-86eb-e17c032d5c5e",
+        "754df761-0b71-4386-86cc-45d524fd21dd"
+      ],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 396,
+        "y": 552,
+        "width": 328,
+        "height": 181,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#1b1e27",
+        "color": "#f5f4fb",
+        "borderColor": "#30333e",
+        "borderWidth": 1,
+        "borderRadius": 14,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "2c3264b5-76d1-496b-af40-0bc0a68fa0c9": {
+      "id": "2c3264b5-76d1-496b-af40-0bc0a68fa0c9",
+      "type": "text",
+      "name": "Символ",
+      "parentId": "c019071a-d615-4cd8-9737-e0ec62dda8d8",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 16,
+        "width": 60,
+        "height": 40,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "⌘",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#f2ba9b",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 30,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "0a0d0b7d-8e2c-4219-86eb-e17c032d5c5e": {
+      "id": "0a0d0b7d-8e2c-4219-86eb-e17c032d5c5e",
+      "type": "text",
+      "name": "Название карточки",
+      "parentId": "c019071a-d615-4cd8-9737-e0ec62dda8d8",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 70,
+        "width": 284,
+        "height": 30,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "02   Найдите свой ритм",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 16,
+        "fontWeight": 600,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "754df761-0b71-4386-86cc-45d524fd21dd": {
+      "id": "754df761-0b71-4386-86cc-45d524fd21dd",
+      "type": "text",
+      "name": "Текст карточки",
+      "parentId": "c019071a-d615-4cd8-9737-e0ec62dda8d8",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 111,
+        "width": 284,
+        "height": 50,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Инструменты, которые\nподстраиваются под вас.",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#8a8f9f",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 13,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.6,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "35013da5-583f-402c-9cb6-59d35e91025d": {
+      "id": "35013da5-583f-402c-9cb6-59d35e91025d",
+      "type": "container",
+      "name": "Создавайте вместе",
+      "parentId": null,
+      "children": [
+        "469631ef-7272-43b6-9490-e375f8f376fe",
+        "21be21ef-1a95-4267-b004-7ae3c0359147",
+        "bbdb0889-73b9-4630-a169-d73a2c9c23c0"
+      ],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 750,
+        "y": 552,
+        "width": 328,
+        "height": 181,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "#1b1e27",
+        "color": "#f5f4fb",
+        "borderColor": "#30333e",
+        "borderWidth": 1,
+        "borderRadius": 14,
+        "opacity": 1,
+        "fontSize": 14,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "469631ef-7272-43b6-9490-e375f8f376fe": {
+      "id": "469631ef-7272-43b6-9490-e375f8f376fe",
+      "type": "text",
+      "name": "Символ",
+      "parentId": "35013da5-583f-402c-9cb6-59d35e91025d",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 16,
+        "width": 60,
+        "height": 40,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "↗",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#d4df98",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 30,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "21be21ef-1a95-4267-b004-7ae3c0359147": {
+      "id": "21be21ef-1a95-4267-b004-7ae3c0359147",
+      "type": "text",
+      "name": "Название карточки",
+      "parentId": "35013da5-583f-402c-9cb6-59d35e91025d",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 70,
+        "width": 284,
+        "height": 30,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "03   Создавайте вместе",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#f5f4fb",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 16,
+        "fontWeight": 600,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    },
+    "bbdb0889-73b9-4630-a169-d73a2c9c23c0": {
+      "id": "bbdb0889-73b9-4630-a169-d73a2c9c23c0",
+      "type": "text",
+      "name": "Текст карточки",
+      "parentId": "35013da5-583f-402c-9cb6-59d35e91025d",
+      "children": [],
+      "hidden": false,
+      "locked": false,
+      "geometry": {
+        "x": 22,
+        "y": 111,
+        "width": 284,
+        "height": 50,
+        "rotation": 0
+      },
+      "properties": {
+        "text": "Одно пространство.\nБесконечные возможности.",
+        "src": "",
+        "alt": "Изображение",
+        "placeholder": "Введите значение…",
+        "checked": false,
+        "options": [
+          "Первый вариант",
+          "Второй вариант",
+          "Третий вариант"
+        ]
+      },
+      "styles": {
+        "background": "transparent",
+        "color": "#8a8f9f",
+        "borderColor": "#353945",
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 1,
+        "fontSize": 13,
+        "fontWeight": 400,
+        "fontFamily": "Inter, system-ui, sans-serif",
+        "textAlign": "left",
+        "lineHeight": 1.6,
+        "padding": 0,
+        "overflow": "visible"
+      },
+      "layout": {
+        "mode": "free",
+        "direction": "column",
+        "gap": 16,
+        "columns": 2,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "responsiveOverrides": {},
+      "states": {},
+      "events": [],
+      "animations": [],
+      "dataBindings": {}
+    }
+  },
+  "canvas": {
+    "width": 1120,
+    "height": 780,
+    "background": "#13151c"
+  },
+  "guides": []
+}

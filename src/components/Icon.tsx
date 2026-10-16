@@ -1,0 +1,3 @@
+import { ArrowUpRight, Badge, Box, CheckSquare, ChevronDown, Circle, Columns2, Frame, Image, LayoutGrid, List, Minus, MousePointer2, PanelTop, Sparkles, Square, TextCursorInput, Type } from 'lucide-react';
+const icons = { frame: Frame, layout: LayoutGrid, text: Type, image: Image, sparkles: Sparkles, square: Square, minus: Minus, button: MousePointer2, input: TextCursorInput, check: CheckSquare, list: List, badge: Badge, box: Box, chevron: ChevronDown, circle: Circle, panel: PanelTop, columns: Columns2, arrow: ArrowUpRight };
+export function Icon({ name, size = 15 }: { name: string; size?: number }) { const Component = icons[name as keyof typeof icons] ?? Box; return <Component size={size} strokeWidth={1.6} />; }
