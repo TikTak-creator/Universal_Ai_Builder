@@ -18,7 +18,7 @@ try {
   $work = Join-Path $repo ('.artifacts/build-' + [guid]::NewGuid().ToString('N'))
   New-Item -ItemType Directory -Path $work | Out-Null
   $source = Join-Path $out "Forma-$version-Source.zip"
-  git archive --format=zip --output=$source $commit
+  git -c core.autocrlf=false archive --format=zip --output=$source $commit
   if ($LASTEXITCODE -ne 0) { throw 'git archive failed.' }
   Expand-Archive -LiteralPath $source -DestinationPath $work
   Push-Location $work

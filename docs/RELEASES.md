@@ -10,7 +10,7 @@ npm ci
 npm run release:win
 ```
 
-The working tree must be clean. [Build-Release.ps1](../scripts/Build-Release.ps1) exports HEAD with `git archive`, extracts it into a new ignored directory, installs the exact lockfile, runs editor and desktop tests, audits runtime dependencies, and builds the installer from that isolated snapshot. It stops on failures; it never publishes automatically.
+The working tree must be clean. [Build-Release.ps1](../scripts/Build-Release.ps1) exports HEAD with `git archive` (canonical Git line endings, independent of `core.autocrlf`), extracts it into a new ignored directory, installs the exact lockfile, runs editor and desktop tests, audits runtime dependencies, and builds the installer from that isolated snapshot. It stops on failures; it never publishes automatically.
 
 Outputs are in a fresh `release/v<version>-<timestamp>/`:
 
@@ -22,6 +22,8 @@ Outputs are in a fresh `release/v<version>-<timestamp>/`:
 | `Forma-<version>-Web.zip` | Static web build; serve over HTTP(S) from the origin root |
 | `release-manifest.json` | Version, source commit, Electron version, platform, build time |
 | `SHA256SUMS.txt` | SHA-256 for every preceding asset |
+
+Tailwind class scanning is explicitly limited to `src/`, so surrounding workspaces and generated output do not affect the stylesheet.
 
 The same manifest is inside each Windows app at `resources/release-manifest.json`. The isolated build is kept under `.artifacts/build-…` for inspection; dependencies and artifacts are ignored by Git.
 
