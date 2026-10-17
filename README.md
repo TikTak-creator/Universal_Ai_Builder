@@ -1,602 +1,249 @@
-# Forma — Universal Visual UI Builder
+<div align="center">
 
-**A visual interface builder with local project storage.**
+<img src="docs/assets/forma-jjk-banner.png" alt="Forma — big ideas, an infinite canvas. Decorative Jujutsu Kaisen banner." width="100%" />
 
-Design on a freeform canvas: add components, arrange nested layers, and customize typography, icons, and effects. Save projects in your browser and move them between devices using JSON.
+# forma.
 
-**Version:** 0.2.0 · **Mode:** Free Design · **Editor language:** Russian · **Storage:** IndexedDB
+### Big ideas. An infinite canvas.
 
-**Repository:** [TikTak-creator/Universal_Ai_Builder](https://github.com/TikTak-creator/Universal_Ai_Builder)
+A local visual interface builder. Shape your idea, layer by layer.
 
-![Forma editor workspace](docs/editor-desktop.jpg)
+[![Release](https://img.shields.io/badge/release-v0.3.0-ac8bfa?style=flat-square)](https://github.com/TikTak-creator/Universal_Ai_Builder/releases/latest) ![Windows x64](https://img.shields.io/badge/Windows-10%20%2F%2011%20x64-ac8bfa?style=flat-square) ![React](https://img.shields.io/badge/React-19-9edfe4?style=flat-square) ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-9edfe4?style=flat-square) ![Storage](https://img.shields.io/badge/Storage-local%20IndexedDB-d4df98?style=flat-square)
 
-> The current release includes the working core editor and Visual Toolkit v0.2. It supports creating and editing interface mockups. HTML/CSS, React, and Flutter generation, responsive layouts, custom interactions, and animation tools are planned for future releases.
+**English** · [Русский](readme_ru.md)
 
-## Contents
+[**Download for Windows ↗**](https://github.com/TikTak-creator/Universal_Ai_Builder/releases/latest) · [First steps](#your-first-design) · [For developers](#for-developers) · [Roadmap](#what-comes-next)
 
-- [About the project](#about-the-project)
-- [Quick start](#quick-start)
-- [Features](#features)
-- [Your first design](#your-first-design)
-- [Customization](#customization)
-- [Keyboard shortcuts](#keyboard-shortcuts)
-- [Saving and transferring projects](#saving-and-transferring-projects)
-- [How the editor works](#how-the-editor-works)
-- [Document format](#document-format)
-- [Repository structure](#repository-structure)
-- [Development and testing](#development-and-testing)
-- [Limitations](#limitations)
-- [Roadmap](#roadmap)
-- [Extending the project](#extending-the-project)
-- [Publishing](#publishing)
-- [Troubleshooting](#troubleshooting)
-- [Further documentation](#further-documentation)
-- [Assets and licenses](#assets-and-licenses)
+</div>
 
-## About the project
+> The banner is decorative fan art. The screenshots below show the real editor. Forma is an independent project with no affiliation to Jujutsu Kaisen.
 
-Forma is a browser application for assembling interfaces visually, from a small form to an application screen, landing page, or dashboard. Elements use pixel coordinates, and their appearance is controlled through the property inspector.
+---
 
-The editor brings together three parts of the design workflow:
+## A workspace for your next idea
 
-1. **Composition:** a component library, canvas, layer tree, and nested containers.
-2. **Styling:** icons, project fonts, independent corner radii, gradients, shadows, and typography.
-3. **Persistence:** local autosave, project management, and editable document import and export.
+Forma turns interface ideas into editable visual documents: add components, arrange nested layers, tune typography and effects, and preview the result. Projects stay on your device. No account, application server, API key, or paid service is required.
 
-No account, application backend, server database, or API keys are required. The application currently has no AI service integrations or paid API dependencies.
+**v0.3.0 brings a Windows desktop edition and installer to the existing Visual Toolkit editor.** The web edition remains available. The editor language is Russian; these docs and the installer are available in English and Russian.
 
-Once dependencies are installed, the local editor can run without an internet connection. Icons, Manrope, and templates are bundled with the project. Images referenced by external URLs still require access to their source sites. A PWA installation flow and a Service Worker for offline access to a hosted deployment are not implemented.
+Despite the repository name, AI integrations and generated HTML/React/Flutter applications are **not implemented**. Current export produces an editable `.forma.json` document.
 
-### Suitable use cases
+![Actual Forma editor — canvas, layers and property inspector](docs/editor-desktop.jpg)
 
-- Exploring screen composition and visual direction.
-- Creating mockups of forms, cards, sections, and application screens.
-- Experimenting with typography, colors, corner radii, and effects.
-- Studying visual editor architecture with React and TypeScript.
-- Building a foundation for a more advanced UI builder.
+## Choose your edition
 
-## Quick start
+| You want to… | Download / command | What you need |
+| --- | --- | --- |
+| Install and start designing | **`Forma-0.3.0-Setup-win-x64.exe`** | Windows 10/11 x64; runtime included |
+| Run without installing | `Forma-0.3.0-Windows-x64.zip` → extract **all** files → `Forma.exe` | Windows x64; projects still use AppData |
+| Develop or inspect the code | `Forma-0.3.0-Source.zip` or Git clone | Supported Node.js and npm |
+| Host the web edition | `Forma-0.3.0-Web.zip` | Static HTTP(S) hosting at the origin root |
 
-### Requirements
+All downloads are on the **[Releases page](https://github.com/TikTak-creator/Universal_Ai_Builder/releases/latest)**. `SHA256SUMS.txt` and `release-manifest.json` identify the files and source commit. The installer is per-user and needs no administrator rights. It creates desktop and Start menu shortcuts and includes an uninstaller.
 
-- **Node.js 22 or newer** and npm.
-- A modern desktop browser with IndexedDB, Pointer Events, and FontFace support.
-- Internet access for the initial npm dependency installation.
+The Windows binaries are unsigned: Windows may show an unknown-publisher or SmartScreen prompt. Verify the official release and SHA-256 before deciding to run them. No automatic updater is included.
 
-The editor is designed for a mouse and keyboard. A dedicated mobile workflow with touch gestures is not implemented.
+**[Installation, backups, updates and troubleshooting →](docs/DESKTOP.md)**
 
-### Clone and run
+## What you can build today
+
+| Compose | Refine | Keep your work |
+| --- | --- | --- |
+| 14 component types | Typography and project fonts | Local autosave |
+| Nested frames and containers | 120 bundled Lucide icons | Multiple local projects |
+| Drag, resize and rotate | Gradients, shadows, blur and glow | JSON import and export |
+| Alignment, distribution, grouping | Independent corner radii | Embedded fonts and local images |
+| Grid, snapping, rulers and guides | Shared canvas / Preview renderer | Undo / redo during the session |
+
+**Components:** Frame, Container, Text, Image, Icon, Shape, Line, Divider, Button, Input, Textarea, Checkbox, Select, Badge.
+
+- **Canvas:** 10–800% zoom, panning, 8 px grid, smart guides, marquee and multi-selection. Move selected elements together; individual elements support eight resize handles and rotation.
+- **Layers:** search, reorder, nest, hide and lock. Parent visibility and locking apply to descendants; reparenting preserves world position and rotation. Tree commands prevent cycles.
+- **Appearance:** solid and gradient fills, borders, up to eight shadows, glow, blur, blend modes, image fit and detailed typography. Import TTF, OTF, WOFF and WOFF2 fonts; bundled Manrope includes Cyrillic.
+- **Preview:** inspect the same rendered document and try form controls. Preview field values are temporary; custom button actions and layout reflow are not implemented.
+
+<details>
+<summary><strong>See the icon library and font manager</strong></summary>
+
+![Icon library](docs/icon-library.jpg)
+
+![Project fonts](docs/font-manager.jpg)
+
+</details>
+
+## Your first design
+
+1. Start Forma and explore the **Orbit** demonstration.
+2. Open **Файл → Новый проект** to choose a blank canvas, its name and dimensions.
+3. Click or drag components from **Элементы**. New elements enter a selected Frame or Container; use the layer tree or **Родитель** to change their parent.
+4. Move and resize the elements. Edit text, geometry, fills and effects in the right inspector.
+5. Add an icon, open **Aa** for fonts, and try **Предпросмотр**.
+6. Wait for **Сохранено**, then use **Экспорт → Скачать JSON** to make a backup. On Windows, choose a destination in the save dialog. Cancelling it does not create a file.
+
+Try [Orbit](examples/orbit.forma.json) and [Visual Toolkit](examples/visual-toolkit.forma.json) through **Файл → Импорт JSON**. Source ZIP includes both examples; desktop packages include them under `resources/examples/`.
+
+### The shortcuts you'll use most
+
+| Shortcut | Action |
+| --- | --- |
+| `V` / `H` · `Space + drag` | Select / hand · temporarily pan |
+| `Ctrl + wheel` · `Shift + 1` | Zoom · fit canvas |
+| `Shift + click` · `Ctrl + A` | Multi-select · select available elements |
+| Arrow keys / `Shift + arrows` | Move 1 / 10 px |
+| `Shift + resize` / rotate | Preserve aspect ratio / snap rotation to 15° |
+| `Alt + drag` | Temporarily disable snapping |
+| `Ctrl + Z` / `Ctrl + Shift + Z` | Undo / redo |
+| `Ctrl + C` / `X` / `V` · `Ctrl + D` | Internal clipboard · duplicate |
+| `Ctrl + G` / `Ctrl + Shift + G` | Group / ungroup |
+| `Ctrl + S` / `Ctrl + Shift + S` | Save / save a copy |
+| `Ctrl + N` / `O` / `E` | New / open / export |
+| `Delete` · `Escape` · `F1` | Delete · cancel gesture / exit Preview · help |
+
+Shortcuts respect text fields and work with Russian keyboard layouts. Clipboard is internal to the editor; it does not transfer elements between applications. Multi-selection resize and rotation are not implemented.
+
+## Your files stay yours
+
+Autosave writes to IndexedDB **700 ms** after a change when the gesture has finished. The last saved project is restored at startup. Undo/redo keeps up to **100 snapshots in memory** and resets when the session ends.
+
+| Edition | Local project store |
+| --- | --- |
+| Windows installed / no-install ZIP | `%APPDATA%\Forma` → IndexedDB at `app://forma/` |
+| Browser | Browser profile + origin, including protocol, host and port |
+
+The two Windows packages share their default profile. Browser stores are separate; `localhost`, `127.0.0.1` and different ports are separate origins. Transfer work using `.forma.json`, not by expecting automatic synchronization.
+
+JSON contains the tree, geometry, styles, guides and embedded fonts/images. URL images remain URLs and require access to their source. Export backups before clearing browser data. Windows uninstall keeps the profile; manually deleting it removes local work. Forma does not encrypt the profile or offer cloud backup.
+
+No app backend, telemetry service or login is added. The bundled editor works offline; external images and links still access their respective sites. The web edition has no Service Worker/PWA install flow.
+
+## For developers
+
+### Run from source
+
+Use **Node.js 22.12+ within 22.x, 24.x, or 26+**, npm and Git. Initial dependency installation requires internet. Windows packaging requires Windows x64; browser development can use another supported Node platform.
 
 ```bash
 git clone https://github.com/TikTak-creator/Universal_Ai_Builder.git
 cd Universal_Ai_Builder
+git switch redbox/desktop-release
 npm ci
 npm run dev
 ```
 
-Open **[http://127.0.0.1:5173/](http://127.0.0.1:5173/)**.
-
-If you downloaded the source as a ZIP, extract it and run `npm ci` and `npm run dev` in the directory containing `package.json`.
-
-The development command binds Vite to `127.0.0.1`. Port `5173` is fixed with `--strictPort`: the server exits with an error if the port is already in use. Stop the server with `Ctrl + C` in its terminal.
-
-### Windows launcher
-
-Double-click **[START.cmd](START.cmd)**. The script:
-
-1. Changes to the project directory.
-2. Checks whether npm is available.
-3. Installs dependencies using `npm ci` if Vite has not been installed.
-4. Starts the editor and opens your browser.
-
-Keep the terminal window open while using the local server.
-
-### Available commands
+Open **http://127.0.0.1:5173/**. Windows users can also run [START.cmd](START.cmd) for the web edition. It requires Node/npm and keeps a terminal server running; the downloadable desktop app does not.
 
 | Command | Purpose |
 | --- | --- |
-| `npm ci` | Install dependencies from `package-lock.json` |
-| `npm run dev` | Start the development server at `127.0.0.1:5173` |
-| `npm run typecheck` | Check TypeScript using `tsc -b` |
-| `npm test` | Run the Vitest suite once |
-| `npm run test:watch` | Run Vitest in watch mode |
-| `npm run build` | Check TypeScript and build the application into `dist/` |
-| `npm run preview` | Serve the existing production build locally |
+| `npm run dev` | Web development on loopback, fixed port 5173 |
+| `npm test` / `npm run test:desktop` | Editor tests / desktop asset and security-policy tests |
+| `npm run typecheck` | Strict TypeScript check |
+| `npm run build` / `npm run preview` | Build web `dist/` / preview over HTTP |
+| `npm run desktop` | Build the web bundle and start Electron |
+| `npm run package:win` | Package the current working directory for Windows |
+| `npm run release:win` | Build all release assets from a clean committed snapshot |
 
-To preview a production build:
+On PowerShell systems that block `npm.ps1`, use `npm.cmd`. Preview runs on a different origin from development and therefore uses a separate browser store. Serve web builds from the origin root; `file://` and subdirectory deployment are not configured.
 
-```bash
-npm run build
-npm run preview
-```
+### Stack and architecture
 
-Vite prints the preview URL in the terminal. Preview may use a different project store from development because it runs on a different port.
-
-## Features
-
-### Canvas and editing
-
-- Freeform element placement in **Free Design** mode.
-- Zoom from **10% to 800%** and canvas panning.
-- An **8 px** grid, grid snapping, smart guides, and rulers.
-- Guides that can be dragged from rulers, repositioned, and removed with a double-click.
-- Click selection, `Shift + click`, and marquee selection.
-- `Alt + marquee` to include nested elements in the selection.
-- Moving multiple selected elements together.
-- Eight resize handles and rotation for individual elements.
-- Aspect ratio preservation and 15° rotation increments with `Shift`.
-- Alignment, distribution, grouping, and layer ordering.
-- Undo/redo, duplication, copy, cut, paste, and a context menu.
-
-### Layers
-
-The layer tree reflects the project hierarchy. Search for elements, collapse branches, drag layers to change order or nesting, and hide or lock elements.
-
-A parent's hidden and locked states apply to its descendants. Reparenting preserves the element's position and rotation on the canvas. Tree operations prevent cycles.
-
-### Component library
-
-| Category | Components |
+| Technology | Responsibility |
 | --- | --- |
-| Structure | Frame, Container |
-| Basic | Text, Image, Icon, Shape, Line, Divider |
-| Forms | Button, Input, Textarea, Checkbox, Select |
-| Data | Badge |
-
-There are **14 implemented component types**. Frames and containers accept children. Grouping creates a container around compatible elements.
-
-### Property inspector
-
-The right panel provides controls for:
-
-- Name, position, width, height, and rotation.
-- Fill, opacity, border, and individual corner radii.
-- Gradients, shadows, glow, blur, and blend mode.
-- Font family, size, weight, line height, and letter spacing.
-- Text content, alignment, italics, decoration, and text transformation.
-- Image source and object-fit mode.
-- Icon settings and form component properties.
-- Padding, overflow, and parent container.
-
-The available controls depend on the selected element.
-
-### Preview
-
-Preview uses the same renderer as the canvas. It lets you inspect the design, type into text fields, select options, and toggle checkboxes.
-
-Values entered during preview are temporary and are not written back into the project document. Buttons do not run custom actions yet. The fit-to-width option scales a fixed canvas; it does not reflow the layout.
-
-## Your first design
-
-The editor interface is currently in Russian. The instructions below include the actual UI labels where useful.
-
-1. Explore the **Orbit** demo on first launch. To start your own design, open **File → New Project** (`Файл → Новый проект`) and choose a blank canvas or Orbit workspace.
-2. Set a name and canvas dimensions. The new project dialog accepts **100–10,000 px** per axis.
-3. In **Elements** (`Элементы`), click a component or drag it onto the canvas.
-4. If a Frame or Container is selected, the new element is added inside it. Use the layer tree or **Parent** (`Родитель`) field to change nesting.
-5. Move the element and resize it using the handles or exact inspector values.
-6. Add text, an image, and an icon. Double-clicking a text element focuses its content field in the inspector.
-7. Open **Preview** (`Предпросмотр`) to inspect the result.
-8. Wait for **Saved** (`Сохранено`), then download a portable copy through **Export → Download JSON** (`Экспорт → Скачать JSON`).
-
-Included examples:
-
-| File | Demonstrates |
-| --- | --- |
-| [orbit.forma.json](examples/orbit.forma.json) | The Orbit layout with 26 elements; a v1 document used to verify migration |
-| [visual-toolkit.forma.json](examples/visual-toolkit.forma.json) | 27 elements, icons, effects, and an embedded font using schema v2 |
-
-Open these files through **File → Import JSON** (`Файл → Импорт JSON`).
-
-## Customization
-
-### Icons
-
-Open **Elements → Icon** (`Элементы → Иконка`). The bundled library contains **120 Lucide SVG icons** in six categories: interface, communication, business, creativity, technology, and the world around us.
-
-Search by Russian or English names, change color and stroke width, style the background, and flip icons horizontally or vertically. You can replace an icon after adding it.
-
-The selected collection is bundled with the application and requires no CDN. Connecting arbitrary external icon libraries is not implemented. A custom SVG can be imported as an image.
-
-![Icon library](docs/icon-library.jpg)
-
-### Corner radii
-
-The **Corners** (`Углы`) panel controls the top-left, top-right, bottom-right, and bottom-left corners independently.
-
-Enter numbers or drag the panel's handles. The chain control links corner values for simultaneous adjustment. A single drag produces one undo step.
-
-### Project fonts
-
-Open the **Aa** button in the top bar or **Typography → Fonts** (`Типографика → Шрифты`).
-
-- Supported formats: **TTF, OTF, WOFF, and WOFF2**.
-- Import checks the file format, size, signature, and browser decoding.
-- Edit the display name, weight, and style, preview sample text, and apply a font.
-- Font data is embedded in the project and saved with the document.
-- Copying elements into another project also transfers the fonts they use.
-- **Manrope**, including Cyrillic and variable weights **200–800**, can be installed from the bundled file with one button.
-
-Observe the licenses of any custom fonts you import.
-
-![Project font manager](docs/font-manager.jpg)
-
-### Fills and effects
-
-| Setting | Implementation |
-| --- | --- |
-| Gradients | Linear, radial, and conic; two colors, an angle, and five presets |
-| Shadows | Up to eight outer or inner shadows |
-| Glow | Configurable through effects |
-| Blur | Element blur and backdrop blur |
-| Blend modes | Normal, Multiply, Screen, Overlay, Darken, Lighten |
-| Borders | Solid, dashed, and dotted |
-| Image fit | Cover, Contain, Fill, Scale-down |
-| Typography | Italics, underline, strikethrough, case transformation, and spacing |
-
-Detailed guide: **[CUSTOMIZATION.md](docs/CUSTOMIZATION.md)**, currently in Russian.
-
-## Keyboard shortcuts
-
-Editor shortcuts do not intercept ordinary text input in fields. Main letter commands use physical key codes, so they also work with a Russian keyboard layout. The implementation recognizes `Cmd` as well as `Ctrl` for command shortcuts on macOS.
-
-| Shortcut | Action |
-| --- | --- |
-| `V` / `H` | Selection tool / hand tool |
-| `Space + drag` | Temporarily pan the canvas |
-| `Ctrl + wheel` | Zoom |
-| `Ctrl + +` / `Ctrl + -` | Zoom in / out |
-| `Shift + 1` | Fit the canvas |
-| `Shift + click` | Add or remove an element from the selection |
-| `Arrow keys` / `Shift + arrow keys` | Move by 1 / 10 px |
-| `Shift + resize` | Preserve aspect ratio |
-| `Shift + rotate` | Rotate in 15° increments |
-| `Alt + drag` | Temporarily disable snapping |
-| `Ctrl + Z` | Undo |
-| `Ctrl + Shift + Z` / `Ctrl + Y` | Redo |
-| `Ctrl + C` / `X` / `V` | Copy / cut / paste |
-| `Ctrl + D` | Duplicate |
-| `Ctrl + G` / `Ctrl + Shift + G` | Group / ungroup |
-| `Ctrl + A` | Select available elements |
-| `Ctrl + S` / `Ctrl + Shift + S` | Save / create a copy |
-| `Ctrl + O` / `Ctrl + N` | Open / create a project |
-| `Ctrl + E` | Export JSON |
-| `Delete` / `Backspace` | Delete selected elements |
-| `Escape` | Cancel the current gesture or clear selection; exit Preview |
-| `F1` / `?` | Open help |
-
-Copy and paste use the **editor's internal clipboard**. Transferring elements through the operating system clipboard between tabs or applications is not supported yet.
-
-## Saving and transferring projects
-
-### Local storage
-
-Documents are stored in IndexedDB, in the `forma-ui-builder` database:
-
-- `projects` stores saved projects.
-- `settings` stores metadata, including the last project ID.
-
-Autosave runs **700 ms** after a change once the current gesture has finished. Writes are queued. The next time the editor starts, it restores the last saved project.
-
-Storage belongs to a **browser, profile, and origin**, where the origin includes protocol, hostname, and port. As a result, `http://127.0.0.1:5173`, `http://localhost:5173`, the production preview, and a hosted deployment use different stores.
-
-Clearing site data removes local projects. Download JSON backups to preserve them.
-
-### Export and import
-
-**Export → Download JSON** creates a `<project-name>.forma.json` file. It contains the element tree, properties, styles, guides, embedded images, and fonts. External images remain URLs.
-
-To move a project:
-
-1. Export JSON from the source browser.
-2. Open Forma on the destination device or origin.
-3. Choose **File → Import JSON**.
-4. Check the design and wait for local saving to finish.
-
-Import validates the document structure and supported values. Legacy v1 documents migrate to v2; unknown future versions are rejected. The JSON file is an editable Forma document, not a generated website.
-
-### Undo history
-
-Undo/redo keeps up to **100 document snapshots** in memory during the current session. History is not included in JSON and does not survive a restart.
-
-One completed gesture or field edit is grouped into one history step. Panning, zooming, and selection changes do not create undo entries.
-
-## How the editor works
-
-### Technology stack
-
-| Technology | Role |
-| --- | --- |
-| React 19 + TypeScript 5.7 | Interface, document types, and commands |
-| Vite 6 | Development server and production bundling |
-| Zustand 5 | Editor state and commands |
-| Tailwind CSS 4 + CSS | Editor interface styling |
-| dnd-kit | Layer sorting and nesting |
-| Lucide React | Editor icons and the component icon catalog |
-| IndexedDB | Local project persistence |
-| FontFace API | Loading embedded fonts |
-| Vitest + fake-indexeddb | Model, operation, renderer, and storage tests |
-
-Dependency ranges are defined in `package.json`; resolved versions are recorded in `package-lock.json`.
-
-### Data flow
-
-The `Project` document is the single source of truth. Panels and tools send commands to the store; commands update the document, and React renders the resulting state.
+| React 19 · TypeScript 5.7 | UI, document types, renderer |
+| Zustand 5 | Commands, selection, history, document state |
+| Vite 6.4 · Tailwind CSS 4 | Bundling and styling |
+| dnd-kit · Lucide React | Layer interactions and icons |
+| IndexedDB · FontFace | Persistence and embedded font loading |
+| Electron 44.9 · electron-builder 26.15 | Sandboxed Windows host and NSIS installer |
+| Vitest 5 · fake-indexeddb · Node test runner | Model/storage tests and desktop policy tests |
 
 ```mermaid
-flowchart TD
-    UI["Panels, keyboard, and Pointer Engine"] --> Commands["Editor Store commands"]
-    Commands --> Project["Project JSON v2"]
-    Commands --> History["Undo / Redo"]
-    History --> Commands
-    Project --> Canvas["Canvas: NodeRenderer"]
-    Project --> Preview["Preview: NodeRenderer"]
-    Project --> Autosave["Autosave queue"]
-    Autosave --> DB["IndexedDB"]
-    Project --> Export["JSON export"]
-    Import["JSON import"] --> Validate["Validation and migration"]
-    Validate --> Commands
+flowchart LR
+  Tools["Panels / pointer / keyboard"] --> Store["Zustand commands"]
+  Store --> Project["Project JSON v2"]
+  Store <--> History["Undo / Redo"]
+  Project --> Renderer["Shared NodeRenderer"]
+  Renderer --> Canvas["Canvas + Preview"]
+  Project --> Save["Autosave → IndexedDB"]
+  Project --> Export[".forma.json"]
+  Import["Import + validation + migration"] --> Store
 ```
 
-During a drag, the geometry engine calculates the new values and writes them into the document. Direct DOM mutations are not used as the persisted design state.
-
-### Geometry and hierarchy
-
-Element coordinates are relative to the parent. The engine transforms them into canvas coordinates, accounts for ancestor rotation, and converts movement back into local coordinates.
-
-Reparenting preserves world geometry. Commands validate the tree and respect inherited locking and visibility. Moving a selected parent and its selected descendant together avoids applying the movement twice to the descendant.
-
-### Shared renderer
-
-`NodeRenderer` recursively builds the interface from the document. Both the canvas and preview use it, keeping component and style rendering in one implementation.
-
-Module responsibilities and implementation details: **[ARCHITECTURE.md](docs/ARCHITECTURE.md)**, currently in Russian.
-
-## Document format
-
-A project is a serializable JSON document. Save the following minimal v2 example as a `.forma.json` file and import it into the editor:
-
-```json
-{
-  "schemaVersion": 2,
-  "id": "example-project",
-  "name": "Blank canvas",
-  "createdAt": "2026-10-15T00:00:00.000Z",
-  "updatedAt": "2026-10-15T00:00:00.000Z",
-  "rootIds": [],
-  "nodes": {},
-  "fonts": [],
-  "canvas": {
-    "width": 1120,
-    "height": 780,
-    "background": "#13151c"
-  },
-  "guides": []
-}
-```
-
-| Field | Contents |
-| --- | --- |
-| `schemaVersion` | Document schema version; currently 2 |
-| `id`, `name` | Project identifier and name |
-| `createdAt`, `updatedAt` | Creation and modification timestamps |
-| `rootIds` | Ordered root element IDs |
-| `nodes` | Element dictionary keyed by ID |
-| `fonts` | Embedded font assets and metadata |
-| `canvas` | Canvas dimensions and background |
-| `guides` | User-created guides |
-
-Each `UINode` contains its type, name, `parentId`, `children`, geometry, properties, styles, layout settings, and `hidden` / `locked` flags.
-
-The `responsiveOverrides`, `states`, `events`, `animations`, and `dataBindings` fields are reserved for expansion. Their presence in the types does not mean the corresponding engines are implemented. Although `Layout` includes `free`, `flex`, and `grid` types, current import validation accepts only `free`.
-
-Type definitions: [types.ts](src/model/types.ts). Creation, validation, migration, and serialization: [document.ts](src/model/document.ts).
-
-## Repository structure
+The document is the source of truth. Commands change it, React renders it; raw DOM mutations do not become saved design state. Coordinates are parent-relative; geometry helpers account for ancestor rotation. Legacy v1 JSON migrates to schema v2, and unknown future schemas are rejected.
 
 ```text
-Universal_Ai_Builder/
-├── docs/                     # Architecture, guides, verification reports, screenshots
-├── examples/                 # Portable .forma.json projects
-├── public/
-│   ├── fonts/                # Manrope and its OFL license
-│   └── licenses/             # Lucide and Feather notices
-├── src/
-│   ├── assets/               # Icon catalog and font handling
-│   ├── canvas/               # Canvas, pointer gestures, resize, and snapping
-│   ├── components/           # Dialogs, Preview, and asset managers
-│   ├── engine/               # Geometry and tree operations
-│   ├── hooks/                # Persistence, shortcuts, and font registration
-│   ├── model/                # Types, validation, migrations, and styling
-│   ├── panels/               # Layers and property inspector
-│   ├── registry/             # Component definitions and defaults
-│   ├── renderer/             # Shared NodeRenderer
-│   ├── storage/              # IndexedDB access
-│   ├── store/                # Zustand, commands, history, and clipboard
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── styles.css
-├── index.html
-├── package.json
-├── package-lock.json
-├── START.cmd
-├── tsconfig.json
-└── vite.config.ts
+src/
+  model/       types, validation, migration, styles
+  engine/      geometry and safe tree operations
+  store/       commands, clipboard and history
+  canvas/      pointer gestures, selection and snapping
+  renderer/    shared recursive NodeRenderer
+  panels/      layers, inspector and property editors
+  assets/      icon catalog and fonts
+  storage/     IndexedDB
+  hooks/       autosave, shortcuts and font registration
+  components/  dialogs, Preview and asset managers
+desktop/       Electron host, policies, icon and tests
+scripts/       isolated release build and manifest
+public/        bundled fonts and asset notices
+examples/      editable JSON projects
+docs/          guides, architecture and verification
 ```
 
-Tests live next to their modules in `*.test.ts` files. The `.gitignore` excludes `node_modules/`, `dist/`, `test-results/`, and `*.tsbuildinfo`.
+The desktop renderer has no Node integration, preload bridge or IPC surface. Context isolation and sandboxing are enabled. The host serves only the built app at `app://forma/`, sets a CSP, blocks navigation and permissions, and opens only two explicitly allowed reference URLs in the system browser. Existing document validation remains responsible for JSON content. This is a hardening baseline, not an independent security audit. See [desktop/main.cjs](desktop/main.cjs) and [security.cjs](desktop/security.cjs).
 
-## Development and testing
+### Extend without breaking saved projects
 
-Before submitting changes, run:
+- **A component:** update `ComponentType`, the registry and renderer; add inspector controls and document validation. Container types must follow the tree invariants.
+- **A property:** define its type, default and validation, expose it in the inspector, and modify it through store commands so history and saving stay consistent.
+- **An asset:** give it a stable ID, handle serialization and search, and preserve its license notice.
+- **A schema:** update version and migration together, keep older documents readable and test JSON round trips.
 
-```bash
-npm test
-npm run build
-```
+Import limits: 25 MB JSON, 5,000 components, 100 hierarchy levels, 8 MB per image, 4 MB per font, 16 MB total fonts and 30 fonts. These are validation bounds; performance at the maximum document size has not been certified.
 
-For a separate type check:
+**[Architecture](docs/ARCHITECTURE.md)** · **[Customization](docs/CUSTOMIZATION.md)** · **[Web test report](docs/TESTING.md)** · **[Desktop verification](docs/TESTING-DESKTOP.md)** · **[Build a release](docs/RELEASES.md)**
 
-```bash
-npm run typecheck
-```
+### Branches and versions
 
-The tests cover serialization and migration, the element tree, geometry, reparenting, undo/redo, clipboard behavior, assets, styling, rendering, and persistence. Unit tests use `fake-indexeddb` in place of the browser database.
-
-Verified on **October 16, 2026**: **80 tests across 8 files pass**, and TypeScript checking and the production build complete successfully. The detailed v0.2 browser verification report from October 15 is in TESTING.md. Run the checks again after changing the code.
-
-Manual scenarios, results, and testing boundaries: **[TESTING.md](docs/TESTING.md)**, currently in Russian.
-
-### Suggested manual smoke test
-
-1. Create a project and add nested elements.
-2. Change geometry and styles; check undo/redo.
-3. Add an icon and a local font.
-4. Save, reload the page, and confirm restoration.
-5. Export JSON and import it again.
-6. Open Preview and check form controls.
-
-This is a suggested verification workflow, not an implemented automated E2E suite.
-
-## Limitations
-
-### Current functional boundaries
-
-- One canvas per document; multi-page projects are not implemented.
-- Free positioning and pixel sizes only.
-- No Flexbox, Grid, breakpoints, or responsive layout reflow.
-- No design tokens, CSS editor, or editable pseudo-states.
-- No event logic, variables, HTTP actions, or animation timeline.
-- JSON export only; HTML/CSS/JS, React, Flutter, and ZIP generators are not implemented.
-- No cloud storage, user accounts, collaborative editing, or cross-tab synchronization.
-- No reusable user components with instances and overrides.
-- Multi-selection supports moving elements together; resize and rotation operate on one element at a time.
-- Grouping expects elements with a common parent.
-- Full mobile interaction and keyboard-only access to every editing operation need further development.
-
-### Validation limits
-
-| Resource | Limit |
+| Ref | Purpose |
 | --- | --- |
-| Components per project | Up to 5,000 |
-| Tree depth | Up to 100 levels |
-| JSON file selected for import | Up to 25 MB |
-| Individual imported image | Up to 8 MB |
-| Individual font | Up to 4 MB |
-| Total font data | Up to 16 MB |
-| Font files | Up to 30 |
-| Undo history | Up to 100 snapshots |
+| `main` | Current documented stable source |
+| `redbox/desktop-release` | Desktop packaging and v0.3.0 release work |
+| `v0.3.0` | Fixed source snapshot for the downloadable release |
+| `ed71108` | Preserved original web-editor baseline in Git history |
 
-These are validation limits, not performance guarantees: stress testing at 5,000 elements has not been performed. Embedded assets increase JSON size, while document snapshots increase memory usage.
+Release files come from an exported committed tree. The manifest records that commit; generated dependencies, user profiles, build output and credentials are excluded from source ZIPs. See [CHANGELOG.md](CHANGELOG.md).
 
-## Roadmap
+## What comes next
 
-The following are proposed development directions, not currently available features. Release dates and target versions have not been assigned.
-
-| Priority | Area | Planned work |
-| --- | --- | --- |
-| 1 | Layout Engine | Flexbox, Grid, constraints, auto-layout, min/max sizes, and breakpoints |
-| 2 | Design System | Color and typography tokens, styles, states, components, and instances |
-| 3 | Interactions | Events, navigation, variables, conditions, form actions, and HTTP requests |
-| 4 | Animation Studio | Transitions, keyframes, a timeline, and animation preview |
-| 5 | Export Engine | HTML/CSS/JS, React, an independent Flutter generator, assets, and compatibility reports |
-| 6 | Workspace | Multiple pages, templates, reusable blocks, and asset management |
-| Ongoing | Reliability and UX | E2E testing, accessibility, performance, diagnostics, and recovery |
-
-### Near-term improvements
-
-- Automate browser tests for creation, drag-and-drop, saving, and import.
-- Add GitHub Actions for tests and builds.
-- Measure large document performance and snapshot history costs.
-- Explore storing image and font data separately from history snapshots.
-- Add command search and improve panel accessibility.
-- Configure a hosted demo.
-- Choose a source code license and add a `LICENSE` file.
-
-The original concept and broader product scope are described in [BRIEF.ru.md](docs/BRIEF.ru.md), in Russian. Use this README and the source code to determine what is implemented.
-
-## Extending the project
-
-### Add a component
-
-1. Add its type to `ComponentType` in [types.ts](src/model/types.ts).
-2. Define the component and its defaults in [components.ts](src/registry/components.ts).
-3. Implement rendering in [NodeRenderer.tsx](src/renderer/NodeRenderer.tsx).
-4. Add component-specific inspector fields.
-5. Update document validation and migration if the data contract changes.
-6. Verify serialization, import, and rendering.
-
-Components that accept children must also follow the container and tree validation rules.
-
-### Add an editable property
-
-Define the property in the model, provide a default, add validation, and expose it in the inspector. Changes should pass through Editor Store commands so undo/redo and autosave remain consistent. The renderer should read the property from the document.
-
-### Add an icon or asset
-
-Extend [iconLibrary.ts](src/assets/iconLibrary.ts) with an explicit import and a unique ID. Account for search, serialization, and licensing. Extend [fonts.ts](src/assets/fonts.ts) for changes to font handling.
-
-### Change the schema
-
-Update the schema version and migration together. Preserve the ability to open older projects and add round-trip checks: document → JSON → document. A format change without migration can make users' saved projects unreadable.
-
-### Prepare a contribution
-
-Describe the problem and expected behavior, change the relevant module, check affected workflows, and update documentation. Keep the core architecture consistent: commands modify the document, and the renderer displays its state.
-
-## Publishing
-
-### GitHub repository
-
-The repository root contains `package.json` and this `README.md`. Keep `package-lock.json` tracked for reproducible dependency installation.
-
-Include `src/`, `public/`, `docs/`, `examples/`, configuration files, and `START.cmd`. Dependencies, local test output, and build artifacts are already excluded through `.gitignore`.
-
-README screenshots and documentation links use relative paths so they work in the repository. Personal projects stored in IndexedDB are not uploaded by Git. JSON examples in `examples/` are ordinary files included with the source.
-
-### Hosting the application
-
-After `npm run build`, the `dist/` directory contains a static application. No separate application API server is required.
-
-A GitHub Pages workflow is not included yet. Deploying under a path such as `/<repository-name>/` requires coordinating Vite's `base` setting, bundled asset paths, and deployment configuration. Verify the application and the bundled Manrope font after deployment.
-
-Publishing source code on GitHub does not automatically deploy the application or transfer local browser projects.
-
-## Troubleshooting
-
-| Problem | What to check |
+| Available now | Future work — not implemented |
 | --- | --- |
-| `npm` is not found | Install Node.js with npm, then reopen the terminal |
-| PowerShell blocks `npm.ps1` | Use `npm.cmd ci`, `npm.cmd run dev`, or `START.cmd` |
-| Port 5173 is already in use | Stop the previous Vite instance in its terminal |
-| Projects disappear after changing the URL | Return to the original origin or transfer a JSON export |
-| Saving fails | Check IndexedDB access and available storage; export JSON before clearing site data |
-| JSON cannot be imported | Check schema version, file size, tree structure, and embedded assets |
-| A font does not load | Check its format, size, weight, style, and FontFace decoding |
-| An image URL does not display | Check source availability or import a local image file |
-| A Preview button does nothing | Custom interaction logic is not implemented yet |
-| JSON does not open as a website | It is a Forma document; import it into the editor |
-| A side panel is missing in a narrow window | Use the Layers and Elements (`Слои и элементы`) and Properties (`Свойства`) switches |
+| Free positioning on one canvas | Flex/Grid, constraints, breakpoints and responsive reflow |
+| Local styling, fonts and effects | Shared design tokens and reusable component instances |
+| Visual Preview and basic form controls | Events, conditions, navigation, HTTP actions and animation timeline |
+| Editable JSON export | HTML/CSS/JS, React and Flutter generators |
+| Local Windows/web projects | Cloud sync, accounts and collaboration |
+| Windows x64 packages | Signed builds, auto-update, other OS/architectures |
 
-When reporting a persistent issue, include reproduction steps, browser version, project version, and a sanitized JSON example. Remove personal data and assets that you cannot redistribute.
+Other priorities: browser E2E automation, CI builds, accessibility, command search, large-document profiling and a hosted demo. Reserved fields such as `events`, `animations`, `dataBindings` and `responsiveOverrides` do not imply working engines. The [original brief](docs/BRIEF.ru.md) describes a wider vision.
 
-## Further documentation
+## Documentation and licenses
 
-The following supporting documents are currently in Russian.
-
-| Document | Contents |
+| Guide | Audience |
 | --- | --- |
-| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Model, data flow, history, geometry, persistence, and extension points |
-| [CUSTOMIZATION.md](docs/CUSTOMIZATION.md) | Icons, corner radii, fonts, styles, and effects in v0.2 |
-| [TESTING.md](docs/TESTING.md) | Completed checks, browser scenarios, and their limitations |
-| [BRIEF.ru.md](docs/BRIEF.ru.md) | Original concept and future development phases |
+| [Windows guide / инструкция](docs/DESKTOP.md) | Install, save, back up and update — EN/RU |
+| [Architecture](docs/ARCHITECTURE.md) | Developers — Russian |
+| [Customization](docs/CUSTOMIZATION.md) | Icons, fonts, corners and effects — Russian |
+| [Releases](docs/RELEASES.md) | Reproduce and verify release packages — EN/RU |
+| [Changelog](CHANGELOG.md) | Changes and existing boundaries |
 
-## Assets and licenses
+Lucide: [ISC notice](public/licenses/lucide.txt); Feather: [MIT notice](public/licenses/feather-mit.txt); Manrope: [SIL OFL](public/fonts/OFL.txt). Electron/Chromium notices ship with the desktop distribution. Imported assets retain their own licenses. [Documentation artwork provenance](docs/assets/README.md).
 
-- **Lucide:** ISC notice and inherited asset information — [lucide.txt](public/licenses/lucide.txt).
-- **Feather:** MIT notice — [feather-mit.txt](public/licenses/feather-mit.txt).
-- **Manrope:** SIL Open Font License 1.1 — [OFL.txt](public/fonts/OFL.txt).
+**No source-code license has been selected for Forma.** Public source availability and third-party notices do not grant an additional license to the whole project.
 
-These notices are included under `public/` and preserved in production builds. User-imported images and fonts remain subject to their respective licenses.
+<div align="center">
 
-**A source code license for Forma has not been selected; this repository does not currently contain a `LICENSE` file.** Bundled asset licenses do not define the license of the entire editor.
+**Start with one frame. Make it yours.**
+
+[Download Forma](https://github.com/TikTak-creator/Universal_Ai_Builder/releases/latest) · [Report an issue](https://github.com/TikTak-creator/Universal_Ai_Builder/issues) · [Русская версия](readme_ru.md)
+
+</div>

@@ -1,0 +1,44 @@
+appId: com.tiktakcreator.forma
+productName: Forma
+asar: true
+npmRebuild: false
+directories:
+  output: release
+files:
+  - dist/**/*
+  - desktop/main.cjs
+  - desktop/security.cjs
+  - desktop/icon.png
+  - package.json
+  - "!node_modules/**/*"
+extraResources:
+  - from: docs/DESKTOP.md
+    to: HOW-TO-USE.md
+  - from: examples
+    to: examples
+  - from: release-manifest.json
+    to: release-manifest.json
+electronLanguages:
+  - en-US
+  - ru
+win:
+  executableName: Forma
+  icon: desktop/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: Forma-${version}-Setup-win-${arch}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Forma
+  uninstallDisplayName: Forma ${version}
+  installerLanguages: [en_US, ru_RU]
+  displayLanguageSelector: true
+  deleteAppDataOnUninstall: false
+  runAfterFinish: false
+publish: null
