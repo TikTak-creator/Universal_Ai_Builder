@@ -42,7 +42,12 @@ try {
     Copy-Item -LiteralPath release-manifest.json -Destination $out
     Copy-Item -LiteralPath (Join-Path $repo 'docs/WEB-DISTRIBUTION.md') -Destination dist/START-HERE.md
     [IO.Compression.ZipFile]::CreateFromDirectory((Join-Path $work 'dist'), (Join-Path $out "Forma-$version-Web.zip"), 'Optimal', $false)
-    $lines = Get-ChildItem -LiteralPath $out -File | Sort-Object Name | ForEach-Object { (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant() + '  ' + $_.Name }
+    $lines = Get-ChildItem -LiteralPath $out -File | Sort-Object Name | ForEach-Object {
+      $hash = [Security.Cryptography.SHA256]::Create()
+      $stream = [IO.File]::OpenRead($_.FullName)
+      try { [BitConverter]::ToString($hash.ComputeHash($stream)).Replace('-', '').ToLowerInvariant() + '  ' + $_.Name }
+      finally { $stream.Dispose(); $hash.Dispose() }
+    }
     [IO.File]::WriteAllLines((Join-Path $out 'SHA256SUMS.txt'), $lines, [Text.UTF8Encoding]::new($false))
     Write-Host "Release built from $commit"
     Write-Host "Artifacts: $out"
